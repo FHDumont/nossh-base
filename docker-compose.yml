@@ -10,10 +10,9 @@ services:
     environment:
       SSHHOST: ${IP_ADDRESS}
       SSHPORT: 22
-      SSHUSER: fhdumont
+      SSHUSER: centos
       SSHAUTH: publickey
       SSHKEY: ~/.ssh/wetty
-      NODE_ENV: 'development'
       BASE: /controller/p/w
     volumes:
       - ~/.ssh:/root/.ssh
@@ -32,8 +31,8 @@ services:
       - WETTY_HOST=wetty
       - WETTY_PORT=3000
       - CONTROLLER_PROTOCOL=http
-      - CONTROLLER_URL=labs-2120nosshcontroll-if5db7py.appd-cloudmachine.com
-      - CONTROLLER_PORT=8090
+      - CONTROLLER_URL=$HOSTNAME
+      - CONTROLLER_PORT=8080
     command: >-
       /bin/bash -c "envsubst
       '$${NGINX_DOMAIN},$${NGINX_PORT},$${WETTY_HOST},$${WETTY_PORT},$${CONTROLLER_PROTOCOL},$${CONTROLLER_URL},$${CONTROLLER_PORT}' <
@@ -42,4 +41,3 @@ services:
 networks:
   default:
     name: nossh-proxy-base
-

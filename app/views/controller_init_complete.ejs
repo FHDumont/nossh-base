@@ -1,0 +1,30 @@
+<% include ./start %>
+<p>The controller has been started successfully</p>
+<p><%= message %></p>
+<p>Controller URL: <a href="<%= url %>" target="_blank"><%= url %></a></p>
+<br>
+<br>
+<div class="container">
+    <form action="/" method="post">
+        <table width="80%">
+            <tr>
+                <td><input type="submit" value="Init Controller" disabled class="blueButtonDisabled" class="blueButton"></td>
+                <td><input type="submit" value="Update License" class="blueButton" formaction="/updateLicense"></td>
+                <td><input type="submit" value="Provision License" class="blueButton" formaction="/provisionLicense"></td>
+                <td><input type="submit" value="Start EUM Server" class="blueButton" formaction="/startEUM"></td>
+            </tr>
+            <tr>
+                <td colspan="4">
+                    <br><br>
+                    <hr style="border: 1px solid black;">
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+
+<p>Logs</p>
+<div class="container">
+    <pre><%= logging %></pre>
+</div>
+<% include ./end %>

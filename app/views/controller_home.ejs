@@ -1,0 +1,39 @@
+<% include ./start %>
+<% if (hasControllerInitFinished) { %>
+<p>The controller has been started successfully</p>
+<p>Log in to the Controller with username / password: appd / appd</p>
+<p>Controller URL: <a href="<%= url %>" target="_blank"><%= url %></a></p>
+<% } %>
+<p>Choose one of the options below</p>
+<div class="container">
+    <form action="/" method="post">
+        <table width="80%">
+            <tr>
+                <% if (hasControllerInitFinished) { %>
+                <td><input type="submit" value="Start Controller" disabled class="blueButtonDisabled" class="blueButton"></td>
+                <% } else { %>
+                <td><input type="submit" value="Start Controller" class="blueButton" formaction="/controllerInit"></td>
+                <% } %>
+                <td><input type="submit" value="Update License" class="blueButton" formaction="/updateLicense"></td>
+                <td><input type="submit" value="Provision License" class="blueButton" formaction="/provisionLicense"></td>
+                <td><input type="submit" value="Start EUM Server" class="blueButton" formaction="/startEUM"></td>
+            </tr>
+            <tr>
+                <td colspan="4">
+                    <br><br>
+                    <hr style="border: 1px solid black;">
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+
+<% if (logging.length > 0) { %>
+<p>Logs</p>
+<div class="container">
+    <pre><%= logging %></pre>
+</div>
+
+<% } %>
+
+<% include ./end %>

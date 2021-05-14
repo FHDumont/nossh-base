@@ -1,6 +1,9 @@
 #!/bin/sh
 
-sed -r '/^ssh-ed25519(.*)wetty-keyfile$/d' -i ~/.ssh/authorized_keys
-rm -rf ~/.ssh/wetty*
+sed -r '/^ssh-ed25519(.*)nossh-keyfile$/d' -i ~/.ssh/authorized_keys
+rm -rf ~/.ssh/nossh*
 
 docker-compose down
+
+docker-compose rm -f
+

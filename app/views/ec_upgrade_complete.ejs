@@ -1,0 +1,24 @@
+<% include ./start %>
+<p>The Enterprise Console has been upgraded successfully</p>
+<p><%= message %></p>
+<p>EC URL: <a href="<%= url %>" target="_blank"><%= url %></a></p>
+<br>
+<br>
+<div class="container">
+    <form action="/" method="post">
+        <table width="80%">
+            <tr>
+                <td><input type="submit" value="Init Controller" disabled class="blueButtonDisabled" class="blueButton"></td>
+                <td><input type="submit" value="Update License" class="blueButton" formaction="/updateLicense"></td>
+                <td><input type="submit" value="Provision License" class="blueButton" formaction="/provisionLicense"></td>
+                <td><input type="submit" value="Start EUM Server" class="blueButton" formaction="/startEUM"></td>
+            </tr>
+        </table>
+    </form>
+</div>
+
+<p>Logs</p>
+<div class="container">
+    <pre><%= logging %></pre>
+</div>
+<% include ./end %>

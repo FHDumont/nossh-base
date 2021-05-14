@@ -1,0 +1,23 @@
+<% include ./start %>
+<p><%= message %></p>
+<p>Choose one of the options below</p>
+<div class="container">
+	<form action="/" method="post">
+		<table width="70%">
+			<tr>
+				<td><input type="submit" value="Update App Config" class="blueButton" formaction="/updateConfig"></td>
+				<td><input type="submit" value="Check Container Status" class="blueButton" formaction="/checkStatus"></td>
+				<td><input type="submit" value="Restart Application" class="blueButton" formaction="/restartApp"></td>
+			</tr>
+		</table>
+	</form>
+</div>
+
+<% if (logging.length > 0) { %>
+<p>Logs</p>
+<div class="container">
+    <pre><%= logging %></pre>
+</div>
+
+<% } %>
+<% include ./end %>

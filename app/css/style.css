@@ -1,0 +1,96 @@
+body,
+.darkBlueBackground {
+  background: url('/img/background_blue.svg') center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: #FFFFFF;
+}
+
+.blueButton {
+  background: url('/img/background_blue.svg') center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: #FFFFFF;
+  border: 2px solid #204470;
+  padding: 7px 15px 7px 15px;
+  border-radius: 8px;
+  font-family: verdana;
+  font-size: 13pt;
+}
+
+.blueButtonDisabled {
+  background-color: #AAAAAA;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: #555555;
+  border: 2px solid #999999;
+  padding: 7px 15px 7px 15px;
+  border-radius: 8px;
+  font-family: verdana;
+  font-size: 13pt;
+}
+
+#menu-button,
+#navbar-left,
+.lightBlue {
+  background: #0099DF;
+  color: #FFFFFF;
+}
+
+p {
+  font-family: verdana;
+  font-size: 16pt;
+  margin: 20px;
+  color: #000000;
+}
+
+pre {
+  margin-right: 60px;
+  color: #000000;
+}
+
+a {
+  color: #551A8B;
+  font-size: 16pt;
+  text-decoration: underline;
+  margin: 20px;
+}
+
+body {
+  margin: 0;
+}
+
+
+#header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#mainContainer {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #FFFFFF;
+  color: #0F223C;
+}
+
+.darkFont {
+  color: #0F223C;
+}

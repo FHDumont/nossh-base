@@ -1,0 +1,11 @@
+<% include ./start %>
+<p>Populate the values below with your controller information</p>
+<div class="container">
+	<form action="/" method="post">
+		<textarea class="form-control" rows="15" id="configEnv" name="configEnv" style="font-size: 10pt; font-family: Courier New; font-weight: bold; width: 1080px;"><%= envFile %></textarea>
+		<br>
+		<input type="submit" value="Save" formAction="saveEnv" class="blueButton">
+		<input type="submit" value="Cancel" formAction="home" class="blueButton">
+	</form>
+</div>
+<% include ./end %>

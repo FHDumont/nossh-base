@@ -1,0 +1,11 @@
+{
+	"version": "0.0.1",
+	"private": true,
+	"dependencies": {
+		"child_process": "^1.0.2",
+		"ejs": "~0.8.5",
+		"express": "3.3.4",
+		"fs": "0.0.1-security",
+		"ps-node": "^0.1.6"
+	}
+}

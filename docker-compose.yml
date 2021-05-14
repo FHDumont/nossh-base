@@ -10,9 +10,9 @@ services:
     environment:
       SSHHOST: ${IP_ADDRESS}
       SSHPORT: 22
-      SSHUSER: centos
+      SSHUSER: ${USER}
       SSHAUTH: publickey
-      SSHKEY: ~/.ssh/wetty
+      SSHKEY: ~/.ssh/nossh
       BASE: /controller/p/w
     volumes:
       - ~/.ssh:/root/.ssh
@@ -31,7 +31,7 @@ services:
       - WETTY_HOST=wetty
       - WETTY_PORT=3000
       - CONTROLLER_PROTOCOL=http
-      - CONTROLLER_URL=$HOSTNAME
+      - CONTROLLER_URL=${IP_ADDRESS}
       - CONTROLLER_PORT=8080
     command: >-
       /bin/bash -c "envsubst

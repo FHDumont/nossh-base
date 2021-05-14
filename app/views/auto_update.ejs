@@ -1,0 +1,18 @@
+<% include ./start %>
+<p><%= message %></p>
+<div class="container">
+	<pre>
+		<div id="ellipsis"><%= logging %></div>
+    </pre>
+</div>
+<% include ./end %>
+<script>
+function addToEllipsis() {
+
+    var ellipsis = document.getElementById("ellipsis");
+    ellipsis.innerHTML = "." + ellipsis.innerHTML;
+
+    setTimeout(addToEllipsis, 1000);
+}
+setTimeout(addToEllipsis, 100);
+</script>

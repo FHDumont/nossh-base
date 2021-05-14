@@ -1,0 +1,11 @@
+{
+    "CONTROLLER": {
+        "startControllerScript": "/home/centos/nossh-base/app/scripts/controller/startController.sh",
+        "provisionLicenseScript": "/home/centos/nossh-base/app/scripts/controller/provisionLicense.sh",
+        "startEUMScript": "/home/centos/nossh-base/app/scripts/controller/startEUM.sh",
+        "upgradeECScript": "/home/centos/nossh-base/app/scripts/controller/upgradeEC.sh",
+        "licenseFile": "/home/centos/appdynamics/platform/controller/license.lic",
+        "logfileName": "/home/centos/nossh-base/logs/out.log",
+        "initializationType": "CONTROLLER"
+    }
+}

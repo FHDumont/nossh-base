@@ -1,0 +1,11 @@
+<% include ./start %>
+<p>Paste the text of your license file below</p>
+<div class="container">
+	<form action="/" method="post">
+		<textarea class="form-control" rows="15" id="licenseText" name="licenseText" style="font-size: 10pt; font-family: Courier New; font-weight: bold; width: 1080px;"><%= licenseText %></textarea>
+		<br>
+		<input type="submit" value="Save" formAction="saveLicense" class="blueButton">
+		<input type="submit" value="Cancel" formAction="home" class="blueButton">
+	</form>
+</div>
+<% include ./end %>

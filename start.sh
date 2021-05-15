@@ -1,5 +1,7 @@
 #!/bin/bash
 
+cd /home/centos/nossh-base
+
 if [[ ! -f "auth/nginx.htpasswd" ]]; then
     echo 
     echo "==> ERROR <=="

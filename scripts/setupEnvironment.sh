@@ -23,7 +23,7 @@ yum install -y docker-ce docker-ce-cli containerd.io
 systemctl start docker
 chkconfig docker on
 groupadd docker
-usermod -aG docker $USER
+usermod -aG docker centos
 
 echo ""
 echo "==> Docker Compose"
@@ -34,5 +34,9 @@ echo ""
 echo "==> Node"
 curl -sL https://rpm.nodesource.com/setup_12.x | bash -
 yum install nodejs -y
+
+echo ""
+echo "==> Other"
+yum install httpd-tools -y
 
 

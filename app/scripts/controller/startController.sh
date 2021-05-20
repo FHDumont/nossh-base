@@ -32,7 +32,7 @@ else
 
     ${HOME_DIR}/nossh-base/app/scripts/controller/startEUM.sh
 
-        echo "Complete"
+    echo "Complete"
 
 fi
 

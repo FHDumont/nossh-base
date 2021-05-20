@@ -7,3 +7,4 @@ docker-compose down
 
 docker-compose rm -f
 
+kill -9 $(lsof -i tcp:3000 | grep -v PID | awk '{print $2}')

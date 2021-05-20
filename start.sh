@@ -14,11 +14,20 @@ if [[ ! -f "auth/nginx.htpasswd" ]]; then
     rm -rf auth
     mkdir -p auth
 else 
-    ./stop.sh
-    ./scripts/createKey.sh
 
-    IP_ADDRESS=`ip addr show | grep "\binet\b.*\bdocker0\b" | awk '{print $2}' | cut -d '/' -f 1`
-    IP_ADDRESS=${IP_ADDRESS} docker-compose up -d --remove-orphans #--build
+    # IS_DOCKER=`systemctl status docker | grep -i '(running)'`
+    # while [ -z "$IS_DOCKER" ]; do
+    #     sleep 5
+    #     IS_DOCKER=`systemctl status docker | grep -i '(running)'`
+    # done
+
+    # echo "DOCKER IS OK!"
+
+    # ./stop.sh
+    # ./scripts/createKey.sh
+
+    # IP_ADDRESS=`ip addr show | grep "\binet\b.*\bdocker0\b" | awk '{print $2}' | cut -d '/' -f 1`
+    # IP_ADDRESS=${IP_ADDRESS} docker-compose up -d --remove-orphans #--build
 
     CONTROLLER_DNS=`hostname`
     # if [[ -f /home/centos/controller_dns.txt ]]; then
